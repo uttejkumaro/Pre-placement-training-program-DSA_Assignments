@@ -1,0 +1,78 @@
+1. Explain all the CSS positions(static, fixed, sticky, relative, absolute) with one code example each
+Certainly! I will provide an explanation of each CSS position along with a code example for each one.
+
+1. Static Position: The default position of an element is static, which means it follows the normal flow of the document.
+
+Example:
+index.html
+<div class="static-example">
+  <p>This is a static positioned element.</p>
+</div>
+style.css
+.static-example {
+  position: static
+}
+
+2. Fixed Position: An element with a fixed position is positioned relative to the browser window. It stays fixed even when the page is scrolled.
+
+Example:
+index.html
+<div class="fixed-example">
+  <p>This is a fixed positioned element.</p>
+</div>
+
+style.css
+.fixed-example {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+
+3.sticky Positio: A sticky positioned element is positioned based on the user's scroll position. It behaves like `relative` until it reaches a specified threshold, then it becomes `fixed`.
+
+Example:
+index.html
+<div class="sticky-example">
+  <p>This is a sticky positioned element.</p>
+</div>
+
+style.css
+.sticky-example {
+  position: sticky;
+  top: 100px;}
+
+
+4. Relative Position: An element with a relative position is positioned relative to its normal position. It allows you to adjust the position using the `top`, `right`, `bottom`, and `left` properties.
+
+Example:
+index.html
+<div class="relative-example">
+  <p>This is a relative positioned element.</p>
+</div>
+style.css
+.relative-example {
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+
+5.Absolute Position: An element with an absolute position is positioned relative to its nearest positioned ancestor (or the document if no positioned ancestor is found). It is taken out of the normal document flow.
+
+Example:
+index.html
+<div class="absolute-parent">
+  <div class="absolute-example">
+    <p>This is an absolute positioned element.</p>
+  </div>
+</div>
+style.css
+.absolute-parent {
+  position: relative;
+}
+.absolute-example {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}

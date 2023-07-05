@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form with Basic Validation</title>
+  <script>
+    function validateForm() {
+      var name = document.forms["myForm"]["name"].value;
+      var email = document.forms["myForm"]["email"].value;
+      var phone = document.forms["myForm"]["phone"].value;
+      var password = document.forms["myForm"]["password"].value;
+      var age = document.forms["myForm"]["age"].value;
+      var gender = document.forms["myForm"]["gender"].value;
+      var date = document.forms["myForm"]["date"].value;
+      var color = document.forms["myForm"]["color"].value;
+
+      // Perform validation checks
+      if (name.trim() == "") {
+        alert("Please enter your name.");
+        return false;
+      }
+
+      if (email.trim() == "") {
+        alert("Please enter your email.");
+        return false;
+      }
+
+      if (!validateEmail(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+      }
+
+      if (phone.trim() == "") {
+        alert("Please enter your phone number.");
+        return false;
+      }
+
+      if (isNaN(phone)) {
+        alert("Please enter a valid phone number.");
+        return false;
+      }
+
+      if (password.trim() == "") {
+        alert("Please enter a password.");
+        return false;
+      }
+
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+
+      if (age.trim() == "" || isNaN(age) || age < 18) {
+        alert("Please enter a valid age greater than or equal to 18.");
+        return false;
+      }
+
+      if (gender == "") {
+        alert("Please select a gender.");
+        return false;
+      }
+
+      if (date.trim() == "") {
+        alert("Please select a date.");
+        return false;
+      }
+
+      if (color.trim() == "") {
+        alert("Please select a color.");
+        return false;
+      }
+
+      // If all validations pass, the form can be submitted
+      return true;
+    }
+
+    function validateEmail(email) {
+      var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      return emailRegex.test(email);
+    }
+  </script>
+</head>
+<body>
+  <h1>Form with Basic Validation</h1>
+  <form name="myForm" onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required><br>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="">Select</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select><br>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required><br>
+
+    <label for="color">Favorite Color:</label>
+    <input type="color" id="color" name="color" required><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
