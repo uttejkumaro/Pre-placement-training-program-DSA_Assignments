@@ -68,9 +68,9 @@ The purpose of the `orientation` media feature is to target the orientation of t
 
 The `orientation` media feature can have two possible values:
 
-1. `portrait`: This value represents a vertical or taller orientation, where the height of the viewport is greater than the width.
+1. portrait: This value represents a vertical or taller orientation, where the height of the viewport is greater than the width.
 
-2. `landscape`: This value represents a horizontal or wider orientation, where the width of the viewport is greater than the height.
+2. landscape: This value represents a horizontal or wider orientation, where the width of the viewport is greater than the height.
 
 By using the `orientation` media feature, you can customize the layout, styling, and presentation of your web pages based on the device orientation. This can be particularly useful for adapting the design to better fit the available screen space and provide an optimal user experience.
 
