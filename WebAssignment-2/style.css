@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+td {
+    width: 5vw;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.noBorder {
+    border: none;
+}
+
+.headingOne {
+    background-color: yellow;
+    padding: 5px;
+    font-size: 5vw;
+}
+
+._color_1 {
+    background-color: #c83939e4;
+}
+
+.color_2 {
+    background-color: #486ae3;
+}
+
+.color_3 {
+    background-color: #ede15b;
+}
+
+.color_4 {
+    background-color: #5ee4a6;
+}
+
